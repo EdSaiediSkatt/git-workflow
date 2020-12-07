@@ -59,7 +59,7 @@ Let's cover a few basics about Bitbucket:
 -   The workflow inside this repository is meant to standardize collaboration across Innsikt and Analysts in Skatteetaten. **It is not foolproof** and **is a work-in-progress**, so better workflows may exist and your feedback is appreciated. It was written as a collaborative initiative intended to help and maintaining it is not the author(s)' responsibility. When you run into problems, first consult the trouble-shoot section, next google and if you find a better solution please do inform us.
 -   Color-guide to this document: This guide uses a code blocks around commands you shall type (and execute by pressing enter).  It uses **`code block in bold`** or often \<\> around characters you must substitute for yourself.
 ```js
-It uses this faded code block style for terminal (e.g. Git Bash)'s output.
+It uses some randomally-colored syntax highlighting as in here in code block style for terminal (e.g. Git Bash)'s output. 
 ```
 
 <a name="using-git-from-a-command-prompt"></a>
