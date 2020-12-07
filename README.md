@@ -192,16 +192,19 @@ fatal: Authentication failed for 'https://git.aurora.skead.no/scm/~m87450/git_wo
 git remote set-url origin https://<USERNAME>:<PASSWORD>@<COPY HTTP LINK WITHOUT https:// HERE, e.g. git.aurora.skead.no/scm/~m87450/git-workflow.git>
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
 If you want to merge two remote branches, use the following:
 ```
 git push origin feature_branch:master --force
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
 In case there are multiple merge conflicts when you are on the local master branch and you do a `git pull origin master` (remember that `git pull` is a `git fetch` plus a `git merge`), then run this to update your local master branch to the origin master branch by force:
 ```
 git reset --hard origin/master
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
 To simply merge a specific file from a branch (A) to another branch (B), ensure you are on the branch you want to merge to (i.e. B), then simply type:
 ```
 git checkout branch_a UpdatedFileOnBranchA
@@ -209,6 +212,7 @@ git checkout branch_a UpdatedFileOnBranchA
 Afterwards, just `git add --all` and `git commit --m "message"` as you wish.
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
 If you try to do a `git pull` and get the following error:
 
 Error:
