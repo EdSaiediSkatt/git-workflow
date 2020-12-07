@@ -75,7 +75,7 @@ Git Bash is a command prompt tool in Windows for using Git. There is a Git GUI o
 6.  Type `mkdir Git`, to **m**a**k**e a **dir**ectory called Git
 7.  (Optional) Get rid of MINGW64 by typing:
 ```
-export PS1="\${PS1/\\\$TITLEPREFIX:}"; export PS1="\${PS1/\\\$MSYSTEM }" \>\> \~/.bashrc
+export PS1=”${PS1/\$TITLEPREFIX:}”; export PS1=”${PS1/\$MSYSTEM }” >> ~/.bashrc
 ```
 8.  Configure Git (explanation below) and then start Gitting
 
@@ -84,8 +84,8 @@ export PS1="\${PS1/\\\$TITLEPREFIX:}"; export PS1="\${PS1/\\\$MSYSTEM }" \>\> \~
 
 You would need to configure Git by running the commands below (writer your own first and last name):
 ```
-git config \--global user.name \"Surname, Firstname\"
-git config \--global user.email \"Firstname.Surname\@skatteetaten.no\"
+git config --global user.name "Surname, Firstname"
+git config --global user.email "Firstname.Surname@skatteetaten.no"
 ```
 <a name="putting-code-into-a-repository"></a>
 ## PUTTING CODE INTO A REPOSITORY:
@@ -106,15 +106,15 @@ The person who will host the repository on their Bitbucket account, will follow 
     c.  Type appropriate file or folder names you would like Git to ignore, each on a line (for folders, you type ignoredfolder/ and for files you type file_to_ignore.extension; depending on what software your team codes in, here are great sample gitignore files: <https://git.aurora.skead.no/users/m87450/repos/gitignore/browse> e.g. for Python:  <https://git.aurora.skead.no/users/m87450/repos/gitignore/browse/Python.gitignore>)
 
 d.  Press CNTR+S to save and CNTR+X to quit (hint: \^means control in nano). ***Tip:** You can edit the text file after creating it in step a) by opening your file explorer and editing the file in notepad too.*
-e.  **NOTE:** Once any file is added and tracked --i.e. included in `git add`, see next step-, it will be tracked and will not be ignored for anyone using the repository. So include files and folders you want ignored WHEN creating a depository OR for new files added or created, include them in the .gitignore file BEFORE running `git add \--all`.
-f.  **NOTE:** If you or someone HAD ADDED a file or folder, BEFORE it was included in the .gitignore text file, and you want to tell git to untrack it locally --i.e. untrack it for you only- then you can type `git update-index \--skip-worktree \<path-name\>`. Each user will have to run this, to untrack it locally.
+e.  **NOTE:** Once any file is added and tracked --i.e. included in `git add`, see next step-, it will be tracked and will not be ignored for anyone using the repository. So include files and folders you want ignored WHEN creating a depository OR for new files added or created, include them in the .gitignore file BEFORE running `git add --all`.
+f.  **NOTE:** If you or someone HAD ADDED a file or folder, BEFORE it was included in the .gitignore text file, and you want to tell git to untrack it locally --i.e. untrack it for you only- then you can type `git update-index --skip-worktree \<path-name\>`. Each user will have to run this, to untrack it locally.
 g.  **NOTE:** If you want to untrack the file for everyone using the repo, you can use option 1 of this stackexchange answer, but caution as it will delete files for others: <https://stackoverflow.com/questions/936249/how-to-stop-tracking-and-ignore-changes-to-a-file-in-git/40272289#40272289>
 h.  **NOTE:** If you want to ignore select subfolders inside a shared (i.e. non-ignored) folder in a repository, you can specify the sharedfolder/subfolder/ inside the gitignore at the root of your directory, or you can place a .gitignore file within the sharedfolder where you add subfolder/ to it. This latter choice may be preferred in some cases.
 
 ```
-7.  git add \--all
-8.  git commit -m \"Initial Commit\"
-9.  git remote add origin \<COPY HTTP LINK HERE\>
+7.  git add --all
+8.  git commit -m "Initial Commit"
+9.  git remote add origin <COPY HTTP LINK HERE\>
 10. git push -u origin HEAD:master
 ```
 11. Refresh the Bitbucket page, you should now see your folder uploaded in the remote repository called origin, on a branch called master.
@@ -126,7 +126,7 @@ For the person who is not the main host of the repository, cloning the repositor
 
 Although it\'s not a precise comparison, you can think of \"Cloning a repository\" as \"Downloading the repository **for the first time**\". The procedure for that is simply by copying the HTTP link that appears in photo above and typing:
 ```
-git clone \<COPY HTTP LINK HERE\>
+git clone <COPY HTTP LINK HERE>
 ```
 <a name="git-basics"></a>
 ## GIT BASICS
@@ -170,11 +170,11 @@ LF will be replaced by CRLF in git
 ```
 , use this:
 ```
-git config \--global core.autocrlf true
+git config --global core.autocrlf true
 ```
 If you encounter this in **Linux or MacOS**, type this:
 ```
-git config \--global core.autocrlf input
+git config --global core.autocrlf input
 ```
 (link with explanation is here: <https://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important>)
 
@@ -185,28 +185,29 @@ If you get the error:
 git push origin master
 ```
 ```js
-fatal: Authentication failed for \'https://git.aurora.skead.no/scm/\~m87450/git_workflow.git/\'
+fatal: Authentication failed for 'https://git.aurora.skead.no/scm/~m87450/git_workflow.git/'
 ```
 , it means that you had not configured properly OR your password was changed, then this is what to do:
 ```
-git remote set-url origin https://\<USERNAME\>:\<PASSWORD\>@\<COPY HTTP LINK WITHOUT https:// HERE, e.g. git.aurora.skead.no/scm/\~m87450/git-workflow.git\>
-```
+git remote set-url origin https://<USERNAME>:<PASSWORD>@<COPY HTTP LINK WITHOUT https:// HERE, e.g. git.aurora.skead.no/scm/~m87450/git-workflow.git> ```
+
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 If you want to merge two remote branches, use the following:
 ```
-git push origin feature_branch:master \--force
+git push origin feature_branch:master --force
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 In case there are multiple merge conflicts when you are on the local master branch and you do a `git pull origin master` (remember that `git pull` is a `git fetch` plus a `git merge`), then run this to update your local master branch to the origin master branch by force:
 ```
-git reset \--hard origin/master
+git reset --hard origin/master
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 To simply merge a specific file from a branch (A) to another branch (B), ensure you are on the branch you want to merge to (i.e. B), then simply type:
 ```
 git checkout branch_a UpdatedFileOnBranchA
 ```
-Afterwards, just `git add \--all` and `git commit --m "message"` as you wish.
+Afterwards, just `git add --all` and `git commit --m "message"` as you wish.
+
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 If you try to do a `git pull` and get the following error:
 
@@ -220,21 +221,21 @@ git stash -u
 ```
 If you want to delete all your changes, you can type:
 ```
-git reset \--hard origin/master
+git reset --hard origin/master
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
 To force pull from merge and overwrite local files:
 ```
-git fetch \--all
-git reset \--hard origin/master
+git fetch --all
+git reset --hard origin/master
 git pull origin master
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
 If you get an error that some of your files will be overridden, but you don't mind that, run this:
 ```
-git reset \--hard origin/master
+git reset --hard origin/master
 ```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
@@ -252,7 +253,7 @@ Checklist A. Step 7.a)
 
 As a rule of thumb, you must only checkout another branch, after having committed any changes on your current branch. If you don't you can get this error:
 ```
-\$ git checkout add_simple_collab_workflow
+git checkout add_simple_collab_workflow
 ```
 Please commit your changes or stash them before you merge.
 
@@ -260,7 +261,7 @@ In these cases, you may wish to discard (i.e. get rid of permanently) or stash (
 
 If you want to discard them, you can execute:
 ```
-git checkout \-- .
+git checkout -- .
 ```
 If you want to stash them, you can execute:
 ```
@@ -272,7 +273,7 @@ Checklist A. Step 12.a)
 
 If your feature branch is ahead of your local master for any reason and the changes ahead are not integrated, you may get this error:
 ```
-\$ git branch -d feature_branch
+git branch -d feature_branch
 ```
 error: The branch \'feature_branch\' is not fully merged.
 
