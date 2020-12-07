@@ -189,8 +189,8 @@ fatal: Authentication failed for 'https://git.aurora.skead.no/scm/~m87450/git_wo
 ```
 , it means that you had not configured properly OR your password was changed, then this is what to do:
 ```
-git remote set-url origin https://<USERNAME>:<PASSWORD>@<COPY HTTP LINK WITHOUT https:// HERE, e.g. git.aurora.skead.no/scm/~m87450/git-workflow.git> ```
-
+git remote set-url origin https://<USERNAME>:<PASSWORD>@<COPY HTTP LINK WITHOUT https:// HERE, e.g. git.aurora.skead.no/scm/~m87450/git-workflow.git>
+```
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 If you want to merge two remote branches, use the following:
 ```
