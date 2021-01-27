@@ -2,9 +2,9 @@
 
 This repository contains the basics of utilizing git, as well as a selection of git workflows utilized in Skatteetaten projects used for collaborations, code-sharing, code-improvement and code-deployment.
 
-The basics are covered in the **Getting Started** section below, whereas the workflows are covered in the attached word document. There is a troubleshooting section below too, once you have set up git on your system.
+The basics are covered in the **Getting Started** section below, whereas the workflows are covered in the folder called **Workflows** above! There is a troubleshooting section below too, once you have set up git on your system.
 
-The Git Workflow consists of sections on Getting Started, Basic Collaboration, Synchronous and Full Collaboration, and Troubleshooting. The other files are referred to in that workflow, and used for visualization of the workflow word document.
+The **Git Basics below** cover sections such as **Getting Started and Troubleshooting**, whereas the **Workflows folder's README** consists of sections on **Basic Collaboration & Synchronous and Full Collaboration**. The other files are referred to in that workflow, and used for visualization of the workflow word document.
 
 To use this project, please clone this project (see instructions below).
 
