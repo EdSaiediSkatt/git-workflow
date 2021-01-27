@@ -28,7 +28,7 @@ This checklist (and this document) originated from summarizing this article:
 | --------|---------|-------|--------|
 | 1       | <ul><li>- [ ] </li>  | Be in the Git project directory you want to work on (it\'ll be created automatically if you \"`git clone`\")          |         |
 | 2       | <ul><li>- [ ] </li>  |  `git pull origin master`    																						 |         |
-| 3       | <ul><li>- [ ] </li>   |  `git checkout --b feature_branch`     																						 |         |
+| 3       | <ul><li>- [ ] </li>   |  `git checkout -b feature_branch`     																						 |         |
 | 4       | <ul><li>- [ ] </li>    |  *DEVELOP A NEW FEATURE, i.e. DO ALL THE CHANGES YOU WANT TO ADD A FEATURE WHICH HAS ONE OR MANY ADDED FUNCTIONALITIES. ASSIGN EACH ADDED FUNCTIONALITY AS ONE COMMIT ITERATIVELY (i.e. add an Atomic Commit). WHEN FINISHED, SAVE THE FILES & PROCEED AS BELOW* (Ensure you are in the same folder in the terminal): <br> *Hint:* In stages 5 or 6, you can type "git status" to see suggestions on what to do.    																						 |         |
 | 5 (iterative) | <ul><li>- [ ] </li>       |  `git add --all`    																						 |         |
 | 6 (iterative) | <ul><li>- [ ] </li>       |  `git commit -m "git commit message"`    																						 |         |
@@ -46,7 +46,7 @@ This checklist (and this document) originated from summarizing this article:
 | --------|---------|-------|--------|
 | 1       | <ul><li>- [ ] </li>       | Be in the Git project directory you want to work on          |         |
 | 2       | <ul><li>- [ ] </li>       |  `git pull origin master`    		 |  \"Download\" the latest version on the remote (called origin)'s master branch, and replace contents in my local Git folder       |
-| 3       | <ul><li>- [ ] </li>       |  `git checkout --b feature_branch`  |  Go to a branch called feature_branch (if there is no such branch, this will create a new branch called feature_branch) and start tracking changes in that branch.       |
+| 3       | <ul><li>- [ ] </li>       |  `git checkout -b feature_branch`  |  Go to a branch called feature_branch (if there is no such branch, this will create a new branch called feature_branch) and start tracking changes in that branch.       |
 | 4       | <ul><li>- [ ] </li>       | DEVELOP A NEW FEATURE (See checklist above for more details  |         |
 | 5       | <ul><li>- [ ] </li>       |  `git add --all`   | You effectively add all the changes made into the staging area, ready to be committed (all this is happening on your local branch).        |
 | 6       | <ul><li>- [ ] </li>       |  `git commit -m "git commit message"`   | You commit the changes from the staging area into your local repository on your local branch.         |
